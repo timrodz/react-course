@@ -12,7 +12,7 @@ console.log('App.js is running!');
  * Only render subtitle with p tag if it exists - logical and operator (&&)
  * render new p tag - if options.length > 0 "Here are your options: " - Otherwise "No options"
  */
-var app = {
+const app = {
   title: 'Indecision App',
   subtitle: 'Put your life in hands of a computer',
   options: [
@@ -20,7 +20,7 @@ var app = {
     'Two'
   ]
 }
-var template = (
+const template = (
   <div>
     <h1>{app.title}</h1>
     {app.subtitle && <p>{app.subtitle}</p>}
@@ -33,7 +33,7 @@ var template = (
 );
 
 // Displaying objects
-var user = {
+const user = {
   name: 'Juan',
   age: 23,
   location: 'Wellington'
@@ -46,7 +46,7 @@ function getLocation(location) {
   }
 }
 
-var templateTwo = (
+const templateTwo = (
   <div>
     {/* Ternary operator (?:) */}
     <h1>{user.name ? user.name : 'Anonymous'}</h1>
@@ -57,6 +57,6 @@ var templateTwo = (
   </div>
 );
 
-var appRoot = document.getElementById('app');
+const appRoot = document.getElementById('app');
 
 ReactDOM.render(template, appRoot);
